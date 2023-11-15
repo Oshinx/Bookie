@@ -4,8 +4,8 @@ services:
   postgres:
     image: postgres:14-alpine # use the alpine version of postgres image
     environment:
-      - POSTGRES_USER=myuser # set the username for postgres
-      - POSTGRES_PASSWORD=mypassword # set the password for postgres
+      - POSTGRES_USER= # set the username for postgres
+      - POSTGRES_PASSWORD= # set the password for postgres
 #    volumes:
 #      - pgdata:/var/lib/postgresql/data # create a named volume for postgres data
     ports:
