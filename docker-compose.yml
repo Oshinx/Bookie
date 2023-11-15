@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:14-alpine # use the alpine version of postgres image
+    environment:
+      - POSTGRES_USER=myuser # set the username for postgres
+      - POSTGRES_PASSWORD=mypassword # set the password for postgres
+#    volumes:
+#      - pgdata:/var/lib/postgresql/data # create a named volume for postgres data
+    ports:
+      - 5432:5432 # expose the postgres port to the host
+
+#volumes:
+#  pgdata: # define the named volume
+#    driver: local # use the local driver
+#    driver_opts:
+#      type: none # specify the type as none
+#      o: bind # specify the option as bind
+#      device: /Users/michaeloshinaike/Documents/docker-volumes # specify the device as the host path
